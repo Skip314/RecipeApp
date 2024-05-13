@@ -22,11 +22,11 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnCategory"
-            style="@style/AlertDialog.AppCompat.BtnCategory"
+            style="@style/Widget.Material3.Button.StyleNavButton"
             android:layout_width="180dp"
             android:layout_height="36dp"
             android:layout_marginEnd="8dp"
-            android:background="@drawable/shape_btn_category"
+            android:background="@color/categori"
             android:text="kateгopuu"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="16dp"
@@ -34,14 +34,13 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnFavorite"
-            style="@style/AlertDialog.AppCompat.BtnCategory"
+            style="@style/Widget.Material3.Button.StyleNavButton"
             android:layout_width="180dp"
             android:layout_height="36dp"
-            android:layout_marginEnd="0dp"
-            android:background="@drawable/shape_btn_favorite"
+            android:background="@color/favorite"
             android:text="uзбpahhoe"
             app:icon="@drawable/ic_heart"
-            app:iconGravity="end"
+            app:iconGravity="textEnd"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="668dp" />
