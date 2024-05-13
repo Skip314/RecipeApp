@@ -22,24 +22,26 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnCategory"
-            style="@style/BtnCategory"
+            style="@style/AlertDialog.AppCompat.BtnCategory"
             android:layout_width="180dp"
             android:layout_height="36dp"
+            android:layout_marginEnd="8dp"
             android:background="@drawable/shape_btn_category"
             android:text="kateгopuu"
-            android:layout_marginEnd="8dp"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="668dp" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnFavorite"
-            style="@style/BtnCategory.favorite"
+            style="@style/AlertDialog.AppCompat.BtnCategory"
             android:layout_width="180dp"
             android:layout_height="36dp"
             android:layout_marginEnd="0dp"
             android:background="@drawable/shape_btn_favorite"
             android:text="uзбpahhoe"
+            app:icon="@drawable/ic_heart"
+            app:iconGravity="end"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="668dp" />
