@@ -11,10 +11,9 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="36dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="55dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_layout_btn_margin"
+        android:layout_marginBottom="@dimen/main_layout_btn_margin_end"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,25 +22,21 @@
         <Button
             android:id="@+id/btnCategory"
             style="@style/StyleNavButton"
-            android:layout_width="180dp"
-            android:layout_height="48dp"
-            android:layout_marginEnd="8dp"
+            android:layout_width="@dimen/main_btn_width"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/main_layout_btn_gap"
             android:backgroundTint="@color/btn_category_color"
-            android:text="kateгopuu"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="668dp" />
+            android:text="kateгopuu" />
 
         <Button
             android:id="@+id/btnFavorite"
             style="@style/StyleNavButton"
-            android:layout_width="180dp"
-            android:layout_height="48dp"
+            android:layout_width="@dimen/main_btn_width"
+            android:layout_height="wrap_content"
             android:backgroundTint="@color/btn_favorite_color"
             android:text="uзбpahhoe"
             app:icon="@drawable/ic_heart"
-            app:iconGravity="textEnd"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="668dp" />
+            app:iconGravity="textEnd" />
 
     </LinearLayout>
 
