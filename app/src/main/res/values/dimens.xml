@@ -4,7 +4,6 @@
     <dimen name="main_btn_corner_radius">8dp</dimen>
     <dimen name="main_btn_width">180dp</dimen>
     <dimen name="main_layout_btn_margin">16dp</dimen>
+    <dimen name="main_layout_btn_margin_gap">2dp</dimen>
     <dimen name="main_layout_btn_margin_end">8dp</dimen>
-    <dimen name="main_layout_btn_gap">8dp</dimen>
-
 </resources>
