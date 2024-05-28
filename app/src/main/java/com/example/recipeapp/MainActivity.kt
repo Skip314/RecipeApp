@@ -7,6 +7,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import com.example.recipeapp.databinding.ActivityMainBinding
 import java.lang.IllegalStateException
 
@@ -23,6 +25,9 @@ class MainActivity : AppCompatActivity() {
 
         with(binding){
         }
+        val fragmentTransaction = supportFragmentManager.beginTransaction()
+
+        fragmentTransaction.replace(R.id.mainContainer, CategoriesListFragment()).commit()
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
