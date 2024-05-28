@@ -10,7 +10,8 @@ class CategoriesListFragment : Fragment(R.layout.fragment_list_categories) {
 
     private var _binding: ActivityMainBinding? = null
     private val binding
-        get() = _binding ?: throw IllegalStateException("Binding for ActivityMainB must not be null")
+        get() = _binding
+            ?: throw IllegalStateException("Binding for ActivityMainB must not be null")
 
     fun onCreateView(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
