@@ -9,6 +9,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
+import androidx.fragment.app.add
+import androidx.fragment.app.commit
 import com.example.recipeapp.databinding.ActivityMainBinding
 import java.lang.IllegalStateException
 
@@ -27,9 +29,11 @@ class MainActivity : AppCompatActivity() {
 
         with(binding) {
         }
-        val fragmentTransaction = supportFragmentManager.beginTransaction()
 
-        fragmentTransaction.replace(R.id.mainContainer, CategoriesListFragment()).commit()
+        supportFragmentManager.commit {
+            add<CategoriesListFragment>(R.id.mainContainer)
+            setReorderingAllowed(true)
+        }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())

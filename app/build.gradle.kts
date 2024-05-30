@@ -42,8 +42,6 @@ dependencies {
 
     val fragment_version = "1.7.1"
 
-    // Java language implementation
-    implementation("androidx.fragment:fragment:$fragment_version")
     // Kotlin
     implementation("androidx.fragment:fragment-ktx:$fragment_version")
 
