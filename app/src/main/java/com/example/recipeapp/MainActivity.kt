@@ -28,14 +28,14 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(binding.root)
 
-        with(binding) {
-        }
-
         binding.btnFavorite.setOnClickListener {
             supportFragmentManager.commit {
                 replace<FavoritesFragment>(R.id.mainContainer)
                 setReorderingAllowed(true)
             }
+        }
+
+        binding.btnCategory.setOnClickListener {
         }
 
         supportFragmentManager.commit {
