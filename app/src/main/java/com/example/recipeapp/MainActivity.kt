@@ -1,14 +1,10 @@
 package com.example.recipeapp
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentTransaction
 import androidx.fragment.app.add
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
@@ -28,6 +24,17 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(binding.root)
 
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
+
+        supportFragmentManager.commit {
+            add<CategoriesListFragment>(R.id.mainContainer)
+            setReorderingAllowed(true)
+        }
+
         binding.btnFavorite.setOnClickListener {
             supportFragmentManager.commit {
                 replace<FavoritesFragment>(R.id.mainContainer)
@@ -36,18 +43,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnCategory.setOnClickListener {
-        }
-
-        supportFragmentManager.commit {
-            add<CategoriesListFragment>(R.id.mainContainer)
-            setReorderingAllowed(true)
-        }
-
-
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+            supportFragmentManager.commit {
+                replace<CategoriesListFragment>(R.id.mainContainer)
+                setReorderingAllowed(true)
+            }
         }
     }
 }
