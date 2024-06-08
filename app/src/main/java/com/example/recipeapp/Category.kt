@@ -1,10 +1,10 @@
 package com.example.recipeapp
 
 class Category(
-    val name: String,
-    val icon: String,
-    val destination: String,
-    val recipe: List<Recipe>,
+    val id: String,
+    val title: String,
+    val description: String,
+    val imageUrl: String,
 )
 
 class Recipe(

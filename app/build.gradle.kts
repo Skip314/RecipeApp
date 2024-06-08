@@ -41,9 +41,10 @@ android {
 dependencies {
 
     val fragment_version = "1.7.1"
+    val json_version = "1.5.0"
 
-    // Kotlin
     implementation("androidx.fragment:fragment-ktx:$fragment_version")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$json_version")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
