@@ -10,7 +10,7 @@ class Category(
 class Recipe(
     val id: Int,
     val title: String,
-    val quality: Int,
+    val quantity: Int,
     val ingredients: List<Ingredient>,
 )
 
