@@ -15,7 +15,7 @@ class Recipe(
 )
 
 class Ingredient(
-    val quality: Float,
+    val quantity: Float,
     val unitOfMeasure: String,
     val description: String,
 )
