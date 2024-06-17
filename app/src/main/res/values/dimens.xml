@@ -3,6 +3,7 @@
 
     <dimen name="main_btn_corner_radius">8dp</dimen>
     <dimen name="main_btn_width">180dp</dimen>
+    <dimen name="margin_0">0dp</dimen>
     <dimen name="margin_2">2dp</dimen>
     <dimen name="margin_4">4dp</dimen>
     <dimen name="margin_8">8dp</dimen>
