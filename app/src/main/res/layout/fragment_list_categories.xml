@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/main_background_color"
     android:orientation="vertical">
 
@@ -13,7 +14,7 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
-            android:layout_height="224dp"
+            android:layout_height="@dimen/margin_224"
             android:scaleType="centerCrop"
             android:src="@drawable/category"
             app:layout_constraintEnd_toEndOf="parent"
@@ -35,20 +36,21 @@
             app:layout_constraintBottom_toBottomOf="@+id/imageView"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <LinearLayout
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerview"
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="@dimen/margin_0"
             android:layout_marginHorizontal="@dimen/margin_16"
             android:layout_marginBottom="@dimen/margin_8"
             android:layout_marginTop="@dimen/margin_16"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView">
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            tools:listitem="@layout/item_category">
 
-        </LinearLayout>
+        </androidx.recyclerview.widget.RecyclerView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
