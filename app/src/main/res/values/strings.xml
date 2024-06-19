@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">RecipeApp</string>
+    <string name="category">KATEГOPUU</string>
+    <string name="favorite">uзбpahhoe</string>
+    <string name="category_name_burger">БУPГEPЫ</string>
+    <string name="category_description_burger">Рецепты всех популярных видов бургеров</string>
 </resources>

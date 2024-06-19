@@ -32,22 +32,24 @@
             android:layout_marginBottom="@dimen/margin_16"
             android:background="@drawable/shape_category_text"
             android:padding="@dimen/margin_8"
-            android:text="KATEГOPUU"
+            android:text="@string/category"
             app:layout_constraintBottom_toBottomOf="@+id/imageView"
             app:layout_constraintStart_toStartOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerview"
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="@dimen/margin_0"
             android:layout_marginHorizontal="@dimen/margin_16"
-            android:layout_marginBottom="@dimen/margin_8"
             android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:spanCount="2"
+            tools:itemCount="6"
             tools:listitem="@layout/item_category">
 
         </androidx.recyclerview.widget.RecyclerView>

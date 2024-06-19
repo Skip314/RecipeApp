@@ -11,7 +11,7 @@
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/mainContainer"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/margin_0"
         android:layout_marginHorizontal="@dimen/margin_16"
         android:layout_marginTop="@dimen/margin_16"
         android:layout_marginBottom="@dimen/margin_8"
@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/margin_2"
             android:backgroundTint="@color/btn_category_color"
-            android:text="kateгopuu" />
+            android:text="@string/category" />
 
         <Button
             android:id="@+id/btnFavorite"
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_2"
             android:backgroundTint="@color/btn_favorite_color"
-            android:text="uзбpahhoe"
+            android:text="@string/favorite"
             app:icon="@drawable/ic_heart"
             app:iconGravity="textEnd" />
 

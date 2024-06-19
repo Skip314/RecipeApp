@@ -6,4 +6,5 @@
     <color name="btn_favorite_color">#E13E3E</color>
     <color name="main_background_color">#F4FAFF</color>
     <color name="text_category_name">#5F3678</color>
+    <color name="description">#666666</color>
 </resources>
