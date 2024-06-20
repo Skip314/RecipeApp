@@ -11,9 +11,7 @@
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/mainContainer"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginHorizontal="@dimen/margin_16"
-        android:layout_marginTop="@dimen/margin_16"
+        android:layout_height="@dimen/margin_0"
         android:layout_marginBottom="@dimen/margin_8"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintTop_toTopOf="parent">
@@ -24,9 +22,10 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin_8"
+        android:layout_margin="@dimen/margin_16"
         android:layout_marginBottom="@dimen/margin_8"
         android:gravity="center"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -34,20 +33,22 @@
         <Button
             android:id="@+id/btnCategory"
             style="@style/StyleNavButton"
-            android:layout_width="@dimen/main_btn_width"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
             android:layout_marginEnd="@dimen/margin_2"
             android:backgroundTint="@color/btn_category_color"
-            android:text="kateгopuu" />
+            android:text="@string/category" />
 
         <Button
             android:id="@+id/btnFavorite"
             style="@style/StyleNavButton"
-            android:layout_width="@dimen/main_btn_width"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
             android:layout_marginStart="@dimen/margin_2"
             android:backgroundTint="@color/btn_favorite_color"
-            android:text="uзбpahhoe"
+            android:text="@string/favorite"
             app:icon="@drawable/ic_heart"
             app:iconGravity="textEnd" />
 

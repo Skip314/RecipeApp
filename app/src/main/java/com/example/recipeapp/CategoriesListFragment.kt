@@ -1,7 +1,6 @@
 package com.example.recipeapp
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.fragment.app.Fragment
 import com.example.recipeapp.databinding.ActivityMainBinding
 import java.lang.IllegalStateException
