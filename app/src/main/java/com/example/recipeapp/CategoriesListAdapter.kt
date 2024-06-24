@@ -1,5 +1,7 @@
 package com.example.recipeapp
 
+import android.graphics.drawable.Drawable
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -26,11 +28,20 @@ class CategoriesListAdapter(private val dataSet: List<Category>) :
 
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
         val category: Category = dataSet[position]
-        //viewHolder.imageView.drawable =
         viewHolder.categoryName.text = category.title
         viewHolder.categoryDescription.text = category.description
+
+        val drawable =
+            try {
+                Drawable.createFromStream(
+                    viewHolder.itemView.context.assets.open(category.imageUrl), null
+                )
+            } catch (e: Exception) {
+                Log.d("!!!", "Image not found: ${category.imageUrl}")
+                null
+            }
+        viewHolder.imageView.setImageDrawable(drawable)
     }
 
     override fun getItemCount() = dataSet.size
-
 }
