@@ -16,8 +16,7 @@
         android:id="@+id/categoryImage"
         android:layout_width="match_parent"
         android:layout_height="@dimen/margin_130"
-        android:scaleType="centerCrop"
-        android:src="@drawable/burger">
+        android:scaleType="centerCrop">
 
     </ImageView>
 
@@ -42,5 +41,13 @@
         android:text="@string/category_description_burger">
 
     </TextView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/ripple_button"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cornerRadius="@dimen/margin_8"
+        app:rippleColor="@color/main_background_color" />
 
 </androidx.cardview.widget.CardView>
