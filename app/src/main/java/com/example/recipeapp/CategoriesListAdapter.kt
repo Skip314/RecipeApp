@@ -3,31 +3,32 @@ package com.example.recipeapp
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.cardview.widget.CardView
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class ItemAdapter(private val dataSet: Category) :
-    RecyclerView.Adapter<ItemAdapter.ViewHolder>() {
+class CategoriesListAdapter(private val dataSet: List<Category>) :
+    RecyclerView.Adapter<CategoriesListAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        var cardView: CardView
-
-        init {
-            cardView = view.findViewById(R.id.cardView)
-        }
+        val imageView: ImageView = view.findViewById(R.id.categoryImage)
+        val categoryName: TextView = view.findViewById(R.id.categoryName)
+        val categoryDescription: TextView = view.findViewById(R.id.categoryDescription)
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
 
-        val view = LayoutInflater.from(viewGroup.context)
-            .inflate(R.layout.item_category, viewGroup, false)
+        val inflater = LayoutInflater.from(viewGroup.context)
+        val view = inflater.inflate(R.layout.item_category, viewGroup, false)
 
         return ViewHolder(view)
     }
 
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
-
-        viewHolder.cardView = dataSet[position]
+        val category: Category = dataSet[position]
+        //viewHolder.imageView.drawable =
+        viewHolder.categoryName.text = category.title
+        viewHolder.categoryDescription.text = category.description
     }
 
     override fun getItemCount() = dataSet.size

@@ -16,4 +16,8 @@ class CategoriesListFragment : Fragment(R.layout.fragment_list_categories) {
         super.onCreate(savedInstanceState)
         _binding = ActivityMainBinding.inflate(layoutInflater)
     }
+
+    private fun initRecycler() {
+        val categoriesAdapter = CategoriesListAdapter(STUB.getCategories())
+    }
 }
