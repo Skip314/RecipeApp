@@ -10,7 +10,7 @@ class ItemAdapter(private val dataSet: Category) :
     RecyclerView.Adapter<ItemAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val cardView: CardView
+        var cardView: CardView
 
         init {
             cardView = view.findViewById(R.id.cardView)
@@ -27,7 +27,7 @@ class ItemAdapter(private val dataSet: Category) :
 
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
 
-        viewHolder.itemView = dataSet[position]
+        viewHolder.cardView = dataSet[position]
     }
 
     override fun getItemCount() = dataSet.size
